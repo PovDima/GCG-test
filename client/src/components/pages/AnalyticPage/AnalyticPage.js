@@ -41,10 +41,14 @@ class AnalyticPage extends PureComponent {
         await this.props.getDataFromAnalytic({ page: this.state.page, sort_field, sort_direction: this.state.sort_direction });
     }
 
+    handleClick = () => {
+        this.props.history.push('/home');
+    }
     renderHeader = () => {
         const { sort_field, sort_direction } = this.state
         return (
             <div className='headerWrapper' >
+                <div onClick={this.handleClick} style={{ 'cursor': 'pointer' }}>Home</div>
                 <div className={classNames('header')} onClick={this.handleSort('userId')}>
                     User ID {sort_field === 'userId' ?
                         <FilterList style={{

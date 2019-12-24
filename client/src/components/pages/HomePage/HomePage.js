@@ -29,14 +29,19 @@ class HomePage extends PureComponent {
     }
 
     handleClick = async e => {
-        const { userId, sendToAnalytic } = this.props
+        const { userId, sendToAnalytic, history } = this.props
         const area = e.target.id;
-        await sendToAnalytic({ userId, area })
+        if (area === 'Analytic') {
+            history.push('/analytics')
+        } else {
+            await sendToAnalytic({ userId, area })
+        }
     }
 
     renderMenu = () => {
         return (
             <div id='Menu' className='menu'>
+                <div id='Analytic' className='menu-item'> Analytic</div>
                 <div className='menu-item'> First Menu Block</div>
                 <div className='menu-item'> Second Menu Block</div>
                 <div className='menu-item'> Third Menu Block</div>
