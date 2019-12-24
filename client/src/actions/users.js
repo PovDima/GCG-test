@@ -1,0 +1,14 @@
+export const SET_USER_ID = "SET_USER_ID";
+
+export function setUserId(userId) {
+  return async dispatch => {
+    try {
+      dispatch({
+        type: SET_USER_ID,
+        userId
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+npm-debug.log
+.idea
+.history
+.vscode
+dist/static/build
+dist/config.js
+package-lock.json
