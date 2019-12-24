@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
-import { Route } from 'react-router';
+import { Route, Redirect } from 'react-router';
 import store from './store';
 import history from './history';
 import HomePage from './components/pages/HomePage';
@@ -16,6 +16,11 @@ class App extends Component {
         <Router history={history}>
           <Route path={`/home`} component={HomePage} />
           <Route path={`/analytics`} component={AnalyticPage} />
+          <Route path={`/`} render={({ location }) => {
+            if (location.pathname === '/') {
+              return <Redirect to="/home" />
+            }
+          }} />
         </Router>
       </Provider>
     )
