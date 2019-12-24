@@ -6,7 +6,7 @@
   "scripts": {
     "client-install": "cd client && npm install",
     "start": "node server.js",
-    "server": "nodemon runner.js",
+    "server": "pm2 start runner.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
