@@ -6,9 +6,9 @@
   "scripts": {
     "client-install": "cd client && npm install",
     "start": "node server.js",
-    "server": "pm2 start runner.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "server": "NODE_ENV=production pm2 start runner.js",
+    "client": "npm run build --prefix client",
+    "dev": "NODE_ENV=production concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Povetkin Dmitriy",
   "license": "MIT",
