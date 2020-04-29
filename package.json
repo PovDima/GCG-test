@@ -2,7 +2,7 @@
   "name": "gcg",
   "version": "1.0.0",
   "description": "gcg",
-  "main": "runner.js",
+  "main": "server.js",
   "scripts": {
     "client-install": "cd client && npm install",
     "server-dev": "nodemon runner.js",
