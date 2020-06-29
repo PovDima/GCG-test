@@ -10,4 +10,4 @@ const AnaliticSchema = new Schema({
 
 const Analytic = mongoose.model('Analytic', AnaliticSchema);
 
-export default Analytic
+export default Analytic;

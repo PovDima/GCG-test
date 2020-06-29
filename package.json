@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "client-install": "cd client && npm install",
-    "server-dev": "nodemon runner.js",
+    "server-dev": "nodemon server.js",
     "client-dev": "npm run start --prefix client",
     "server": "NODE_ENV=production pm2 start runner.js",
     "client": "npm run build --prefix client",
