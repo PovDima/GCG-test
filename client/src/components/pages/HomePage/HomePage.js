@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import uuid from 'uuid';
 
 import * as AnalyticsActions from '../../../actions/analytics';
-import * as UsersActions from '../../../actions/users';
+import * as UsersActions from '../../../actions/modeling';
 
 import { getFromLocalStorage, setToLocalStorage } from '../../../utils/localStorageUtils';
 
-import './HomePage.css';
+import './MainPage.css';
 
-class HomePage extends PureComponent {
+class MainPage extends PureComponent {
   static propTypes = {
     sendToAnalytic: PropTypes.func.isRequired,
     setUserId: PropTypes.func.isRequired,
@@ -81,7 +81,7 @@ class HomePage extends PureComponent {
 
 export default connect(
   (state) => {
-    return { userId: state.users.userId };
+    return { userId: state.modeling.userId };
   },
   { ...AnalyticsActions, ...UsersActions }
-)(HomePage);
+)(MainPage);

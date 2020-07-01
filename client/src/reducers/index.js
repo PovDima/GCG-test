@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux';
-import users from './users';
-import analytics from './analytics';
+import modeling from './modeling';
 
 export default combineReducers({
-  users,
-  analytics
-})
+  modeling
+});
